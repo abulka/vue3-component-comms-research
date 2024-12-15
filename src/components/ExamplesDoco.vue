@@ -3,6 +3,20 @@ import { RouterLink } from 'vue-router'
 </script>
 
 <template>
+  <h1>Communication between components in Vue 3</h1>
+  <p>Demo and explanation of different ways to communicate between Vue 3 components. </p>
+  <p>Covers the following techniques:</p>
+  <ul>
+    <li>1. Parent to Child Communication (Props)</li>
+    <li>2. Child to Parent Communication (Emit Events)</li>
+    <li>3. Default Slot</li>
+    <li>4. Named Slots</li>
+    <li>5. Scoped Slots</li>
+    <li>6. Putting It All Together</li>
+  </ul>
+
+  <p>Based on insights gathered in conjunction with <a href="https://chatgpt.com/share/675ea719-6418-8005-9aa5-5e4c1a0560c7">this ChatGPT discussion</a></p>
+
   <h2>1. Parent to Child Communication (Props)</h2>
   <p>Props are the primary mechanism for passing data from a parent component to a child in Vue. They allow you to
     define what data the child expects and ensure a clear contract for communication. This technique is best used when
