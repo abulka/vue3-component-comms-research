@@ -16,6 +16,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/example2">Example 2. Child to Parent Communication (Emit Events)</RouterLink>
         <RouterLink to="/example3">Example 3. Default Slot</RouterLink>
         <RouterLink to="/example4">Example 4. Named Slots</RouterLink>
+        <RouterLink to="/example5">Example 5. Scoped Slots</RouterLink>
         <RouterLink to="/prism-demo">Prism Syntax Highlighting Demo</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
