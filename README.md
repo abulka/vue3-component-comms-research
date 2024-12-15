@@ -8,7 +8,14 @@ Demo and explanation of different ways to communicate between Vue 3 components. 
 5. Scoped Slots
 6. Putting It All Together
 
-Based on https://chatgpt.com/c/675e5f1e-48f8-8005-82c2-9b666c20c828
+
+  <p>Based on insights gathered in conjunction with <a href="https://chatgpt.com/share/675ea719-6418-8005-9aa5-5e4c1a0560c7">this ChatGPT discussion</a></p>
+
+# Run the app and see:
+
+![screenshot](/doco/screenshot.png)
+
+You can then visit the pages for each communication technique to see the examples in action.
 
 ## Recommended IDE Setup
 
