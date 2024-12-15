@@ -6,8 +6,18 @@ import 'github-markdown-css/github-markdown.css';
 
 // Method 1: Using fetch for local public directory markdown
 const markdownContent = ref('')
+const cheatsheetContent = ref('')
+const mainInsightsContent = ref('')
 
 onMounted(async () => {
+  try {
+    // Assuming the markdown file is in the public folder
+    const response = await fetch('/main-insights-doco.md')
+    mainInsightsContent.value = await response.text()
+  } catch (error) {
+    console.error('Error loading main insights markdown:', error)
+  }
+
   try {
     // Assuming the markdown file is in the public folder
     const response = await fetch('/examples-doco.md')
@@ -15,7 +25,15 @@ onMounted(async () => {
   } catch (error) {
     console.error('Error loading markdown:', error)
   }
+
+  try {
+    const response = await fetch('/cheatsheet-doco.md')
+    cheatsheetContent.value = await response.text()
+  } catch (error) {
+    console.error('Error loading cheatsheet markdown:', error)
+  }
 })
+
 
 
 </script>
@@ -97,13 +115,27 @@ onMounted(async () => {
 
     <div class="markdown-body">
     <br>
-    <h1>More Discussion re slots</h1>
-    <!-- set options via props -->
+    <h1>Main Insights</h1>
+    <VueShowdown
+      :markdown="mainInsightsContent"
+      flavor="github"
+      :options="{ emoji: true }"
+    />
+
+    <h1>More Discussion re Slots</h1>
     <VueShowdown
       :markdown="markdownContent"
       flavor="github"
       :options="{ emoji: true }"
     />
+
+    <h1>Cheatsheet</h1>
+    <VueShowdown
+      :markdown="cheatsheetContent"
+      flavor="github"
+      :options="{ emoji: true }"
+    />
+
   </div>
 </template>
 
