@@ -17,6 +17,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/example3">Example 3. Default Slot</RouterLink>
         <RouterLink to="/example4">Example 4. Named Slots</RouterLink>
         <RouterLink to="/example5">Example 5. Scoped Slots</RouterLink>
+        <RouterLink to="/example9">Example 9. Putting it all together</RouterLink>
         <RouterLink to="/prism-demo">Prism Syntax Highlighting Demo</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
