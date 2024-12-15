@@ -4,14 +4,11 @@ import { PrismEditor } from 'vue-prism-editor';
 import 'vue-prism-editor/dist/prismeditor.min.css'; // import the styles somewhere
 import { highlight, languages } from 'prismjs';
 import 'prismjs/themes/prism-tomorrow.css';
-
-const code = `<template>
-  <ChildComponent :greeting="message" />
-</template>`;
+import { codeParent, codeChild } from '@/components/example1/code-example-1';
 
 function highlighter(code: string) {
    // languages.<insert language> to return html with markup
-  return highlight(code, languages.html);
+  return highlight(code, languages.html, 'html');
 }
 </script>
 
@@ -23,14 +20,21 @@ function highlighter(code: string) {
     <div>
       <prism-editor
         class="my-editor"
-        v-model="code"
+        v-model="codeParent"
         :highlight="highlighter"
         line-numbers
       ></prism-editor>
     </div>
     <h2>Child Component</h2>
-
-
+    <div>
+      <prism-editor
+        class="my-editor"
+        v-model="codeChild"
+        :highlight="highlighter"
+        line-numbers
+      ></prism-editor>
+    </div>
+    <h2>Output</h2>
     <ParentComponent />
   </main>
 </template>

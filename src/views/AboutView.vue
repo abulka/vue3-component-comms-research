@@ -1,6 +1,8 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>by Andy Bulka</h1>
+    <p>Email: <a href="mailto:abulka@gmail.com">abulka@gmail.com</a></p>
+    <p>Website: <a href="https://abulka.github.io/" target="_blank">abulka.github.io</a></p>
   </div>
 </template>
 

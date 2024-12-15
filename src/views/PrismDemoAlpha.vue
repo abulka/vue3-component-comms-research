@@ -1,4 +1,5 @@
 <template>
+  <h1>Demo of Prism syntax highlighting</h1>
   <prism-editor
     class="my-editor"
     v-model="code"
@@ -25,7 +26,7 @@ export default {
   data: () => ({ code: 'console.log("Hello World")' }),
   methods: {
     highlighter(code: string) {
-      return highlight(code, languages.js); // languages.<insert language> to return html with markup
+      return highlight(code, languages.js, 'js'); // languages.<insert language> to return html with markup
     },
   },
 };
