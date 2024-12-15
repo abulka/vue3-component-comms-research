@@ -13,6 +13,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/example1">Example 1 - Parent to Child Communication (Props)</RouterLink>
+        <RouterLink to="/example2">Example 2 - Child to Parent Communication (Emit Events)</RouterLink>
         <RouterLink to="/prism-demo">Prism Syntax Highlighting Demo</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>

@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import ParentComponent from '@/components/example1/ParentComponent.vue'
+import ParentComponent from '@/components/example2/ParentComponent.vue'
 import { PrismEditor } from 'vue-prism-editor';
 import 'vue-prism-editor/dist/prismeditor.min.css'; // import the styles somewhere
 import { highlight, languages } from 'prismjs';
 import 'prismjs/themes/prism-tomorrow.css';
-import { codeParent, codeChild } from '@/components/example1/_code';
+import { codeParent, codeChild } from '@/components/example2/_code';
 
 function highlighter(code: string) {
    // languages.<insert language> to return html with markup
@@ -15,7 +15,7 @@ function highlighter(code: string) {
 <template>
   <main>
     <h1>1. Parent to Child Communication (Props)</h1>
-    <p>The parent component passes data to the child component via props.</p>
+    <p>The child component sends data to the parent using emit.</p>
     <h2>Parent Component</h2>
     <div>
       <prism-editor

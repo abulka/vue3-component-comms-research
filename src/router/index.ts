@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ExampleOne from '@/views/ExampleOne.vue'
+import ExampleTwo from '@/views/ExampleTwo.vue'
 import PrismDemoAlpha from '@/views/PrismDemoAlpha.vue'
 
 const router = createRouter({
@@ -15,6 +16,11 @@ const router = createRouter({
       path: '/example1',
       name: 'example1',
       component: ExampleOne,
+    },
+    {
+      path: '/example2',
+      name: 'example2',
+      component: ExampleTwo,
     },
     {
       path: '/prism-demo',
