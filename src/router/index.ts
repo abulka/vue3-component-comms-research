@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import ExampleOne from '@/views/ExampleOne.vue'
 import ExampleTwo from '@/views/ExampleTwo.vue'
 import ExampleThree from '@/views/ExampleThree.vue'
+import ExampleFour from '@/views/ExampleFour.vue'
 import PrismDemoAlpha from '@/views/PrismDemoAlpha.vue'
 
 const router = createRouter({
@@ -27,6 +28,11 @@ const router = createRouter({
       path: '/example3',
       name: 'example3',
       component: ExampleThree,
+    },
+    {
+      path: '/example4',
+      name: 'example4',
+      component: ExampleFour,
     },
     {
       path: '/prism-demo',
