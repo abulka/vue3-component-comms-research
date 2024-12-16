@@ -11,6 +11,8 @@ Demo and explanation of different ways to communicate between Vue 3 components. 
 
   <p>Based on insights gathered in conjunction with <a href="https://chatgpt.com/share/675ea719-6418-8005-9aa5-5e4c1a0560c7">this ChatGPT discussion</a></p>
 
+  <p>👉 See the VERY GOOD <a href="https://vuejs.org/guide/components/slots" target="_blank">official doco on slots</a></p>
+
 # Run the app and see:
 
 ![screenshot](/doco/screenshot.png)

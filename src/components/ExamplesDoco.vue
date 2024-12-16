@@ -51,7 +51,14 @@ onMounted(async () => {
     <li>6. Putting It All Together</li>
   </ul>
 
-  <p>Based on insights gathered in conjunction with <a href="https://chatgpt.com/share/675ea719-6418-8005-9aa5-5e4c1a0560c7">this ChatGPT discussion</a></p>
+  <p>Based on insights gathered in conjunction with <a
+      href="https://chatgpt.com/share/675ea719-6418-8005-9aa5-5e4c1a0560c7">this ChatGPT discussion</a></p>
+
+
+  <h2>Basic ideas</h2>
+  <img src="https://vuejs.org/assets/slots.CKcE8XYd.png" alt="Vue Slots Diagram" style="max-width: 100%; height: auto;" />
+
+  <p>👉 See the VERY GOOD <a href="https://vuejs.org/guide/components/slots" target="_blank">official doco on slots</a></p>
 
   <h2>1. Parent to Child Communication (Props)</h2>
   <RouterLink to="/example1">Example 1. Parent to Child Communication (Props)</RouterLink>
@@ -93,13 +100,17 @@ onMounted(async () => {
     displayed. Use scoped slots when the parent requires access to dynamic data or helper functions from the child to
     render its content correctly. This technique ensures a clean separation of responsibilities while still providing
     customization.</p>
-    <br>
-    <h3>Tip: When to Use Each</h3>
-    <p><u>Named Slots:</u> Use when you need <u>static</u>, labeled placeholders for content. For example, defining reusable layouts like a modal, card, or template with header, body, and footer sections.</p>
-    <p><u>Scoped Slots:</u> Use when the child has <u>dynamic data</u> that the parent needs access to in order to customize the display. For example, when building components like lists, grids, or tables, where the child manages the structure but the parent customizes how the data is displayed.</p>
+
+  <h3>Tip: When to Use Each</h3>
+  <p><u>Named Slots:</u> Use when you need <u>static</u>, labeled placeholders for content. For example, defining
+    reusable layouts like a modal, card, or template with header, body, and footer sections.</p>
+  <p><u>Scoped Slots:</u> Use when the child has <u>dynamic data</u> that the parent needs access to in order to
+    customize the display. For example, when building components like lists, grids, or tables, where the child manages
+    the structure but the parent customizes how the data is displayed.</p>
   <ul>
     <li>Named Slots = Labeled static containers.</li>
-    <li>Scoped Slots = Child shares dynamic data with the parent for customized rendering. The "scope" is the data exposed from the child.</li>
+    <li>Scoped Slots = Child shares dynamic data with the parent for customized rendering. The "scope" is the data
+      exposed from the child.</li>
   </ul>
 
   <h2>Putting It All Together</h2>
@@ -113,28 +124,21 @@ onMounted(async () => {
 
 
 
-    <div class="markdown-body">
-    <br>
-    <h1>Main Insights</h1>
-    <VueShowdown
-      :markdown="mainInsightsContent"
+  <div class="markdown-body">
+    <h1>ChatGPT Extracts</h1>
+    <VueShowdown :markdown="mainInsightsContent"
       flavor="github"
-      :options="{ emoji: true }"
-    />
+      :options="{ emoji: true }" />
 
     <h1>More Discussion re Slots</h1>
-    <VueShowdown
-      :markdown="markdownContent"
+    <VueShowdown :markdown="markdownContent"
       flavor="github"
-      :options="{ emoji: true }"
-    />
+      :options="{ emoji: true }" />
 
     <h1>Cheatsheet</h1>
-    <VueShowdown
-      :markdown="cheatsheetContent"
+    <VueShowdown :markdown="cheatsheetContent"
       flavor="github"
-      :options="{ emoji: true }"
-    />
+      :options="{ emoji: true }" />
 
   </div>
 </template>
@@ -142,4 +146,8 @@ onMounted(async () => {
 <style scoped>
 @import 'github-markdown-css/github-markdown.css';
 
+.markdown-body {
+  background-color: #302e38c7; /* Change this to your desired background color */
+  padding: 20px; /* Optional: Add some padding for better readability */
+}
 </style>
